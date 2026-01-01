@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Finding the largest number with help of Arguemnt Objects     
+            </p>
+        <p id="result"></p>
+        <script>
+            function findMax() {
+                var i;
+                var max = 0;
+                fir(i = 0; i < arguments.length; i++){
+                    if (arguemnts[i] > max) {
+                        max = arguemnts[i];
+                    }
+                }
+                return max;
+            }
+            document.getElementById("result").innerHTML = findMax(4, 5, 6);
+        </script>
+    </body>
+</html>

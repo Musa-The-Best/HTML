@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript Objects Data Structure and Arrays</h2>
+
+    <script>
+        // Object definition
+        var student = {
+            name: 'Riya',
+            age: '12',
+            Grade: '7',
+            hobbies: 'Drawing',
+            fav_sport: 'Cricket'
+        };
+
+        // Array definition
+        var color = ["white", "black", "red", "green", "blue"];
+
+        // Display student information
+        document.write("Student name is: " + student.name + "<br>");
+        document.write("Student favorite sport is: " + student.fav_sport + "<br><br>");
+
+        // Display favorite color
+        document.write("My favorite color is: " + color[3] + "<br><br>");
+
+        // Display array before pop
+        document.write("Before Popping the colors are: " + color.join("*") + "<br>");
+
+        // Remove last element from array
+        color.pop();
+
+        // Display array after pop
+        document.write("After Popping the colors are: " + color.join("*"));
+    </script>
+</body>
+
+</html>

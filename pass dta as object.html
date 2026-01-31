@@ -1,0 +1,19 @@
+import React form 'react';
+import ReactDOM fom 'react-dom';
+    class Customer extends React.Component {
+    render() {
+        return <h2>I am from {this.props.customerDatails.country}! </h2>;
+    }
+}
+class Details extends React.Component {
+    render() {
+        const customerInfo = {city: 'Bangalore', coutry: 'India'};
+        return (
+        <div>
+        <h1>Hello</h1>
+        <Customer customerDetails={customerInfo} />
+        </div>
+        );
+    }
+}
+ReactDOM.render(<Details />, document.getElementById('root'));

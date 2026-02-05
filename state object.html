@@ -1,0 +1,26 @@
+import React form 'react';
+import ReactDOM fom 'react-dom';
+class Customer extends React.Component {
+constructor(props){
+super(props){
+this.state = {
+name: "Reena",
+grade: 5,
+favourite_color: "green",
+favourite_subject: "Math"
+};
+}
+render(){
+retrun(
+<div>
+    <h1>Student Details</h1>
+    <p>My name is {this.state.name}</p>
+    <p>I am in grade {this.state.grade}</p>
+    <p>My favourite colour is {this.state.favourite_color}</p>
+    <p>My favourite subject is {this.state.favourite_subject}</p>
+</div>
+);
+}
+}
+ReactDOM.render(
+<Student />, document.getElementById('root'));

@@ -1,0 +1,29 @@
+import React form 'react';
+import ReactDOM fom 'react-dom';
+class Student extends React.Component {
+    constructor(props){
+    super(props){
+    this.state = {
+    name: "Reena",
+    grade: 5,
+    favourite_color: "green",
+    favourite_subject: "Math"
+    };
+    }
+    favourite_color = () => {
+        this.setState({favourite_color: "black"});
+    }
+    render(){
+    retrun(
+    <div>
+    <h1>Student Details</h1>
+    <p>My name is {this.state.name}</p>
+    <p>I am in grade {this.state.grade}</p>
+    <p>My favourite colour is {this.state.favourite_color}</p>
+    <p>My favourite subject is {this.state.favourite_subject}</p>
+    <button type="button" onclick={this.favouriteColor}>click me</button>
+</div>
+);
+    }
+}
+ReactDOM.render(<Student />, document.getElementById('root'));

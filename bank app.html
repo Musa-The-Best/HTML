@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musa The Bank</title>
+    <style>
+        body {
+            background: #f5f5f5;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .text1 {
+            color: red;
+            text-decoration: overline;
+        }
+        .text2 {
+            color: #71ffb0;
+            text-decoration: line-through;
+        }
+        .text3 {
+            color: rgb(70, 98, 120);
+            text-decoration: underline;
+        }
+        .text4 {
+            color: rgba(0, 0, 0, 0.4);
+            text-decoration: underline overline;
+        }
+        .p1 {
+            font-family: "Times New Roman", Times, serif;
+        }
+        .p2 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Musa The Bank</h1>
+    
+    <p class="text1">MUSA</p>
+    <p class="text2">DA</p>
+    <p class="text3">GOAT</p>
+    
+    <p>Current Balance: $<span id="current_balance">0</span></p>
+    
+    <input type="number" id="entered_amount" placeholder="Enter amount">
+    <button onclick="updateBalance()">Update Balance</button>
+    
+    <script>
+        function updateBalance() {
+            let current_balance_el = document.getElementById("current_balance");
+            let entered_amount_el = document.getElementById("entered_amount");
+            
+            let current_balance = parseInt(current_balance_el.innerText);
+            let entered_amount = parseInt(entered_amount_el.value);
+            
+            if (isNaN(entered_amount)) {
+                alert("Please enter a valid number");
+                return;
+            }
+            
+            let account_balance = current_balance + entered_amount;
+            current_balance_el.innerHTML = account_balance;
+            
+            entered_amount_el.value = "";
+        }
+    </script>
+</body>
+</html>

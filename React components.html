@@ -1,0 +1,28 @@
+import React from 'react';
+
+function Goal() {
+return <h2>My goal is to become a Engineer</h2>;
+}
+
+export default Goal;
+import React from 'react';
+import Goal from './Details.js';
+
+class Name extends React.Component {
+render() {
+return (
+<div>
+    <h2> Hi, I am Riya</h2>
+    <Goal />
+</div>
+);
+}
+}
+
+export default Name;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Name from './App.js';
+
+ReactDOM.render(
+<Name />, document.getElementById('root'));
